@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.14.0)
+project(avh_example VERSION 0.1.0)
+set(CMSIS_PATH "${CMAKE_SOURCE_DIR}/CMSIS_5")
+
+set(CMAKE_CXX_STANDARD 20 CACHE STRING "The C++ standard to use")
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+set(CMAKE_C_STANDARD_REQUIRED TRUE)
+include_directories(${CMAKE_SOURCE_DIR})
+add_subdirectory(src)
