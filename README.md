@@ -21,12 +21,12 @@ bash cmake_build.sh
     /path/to/FVP_Corstone_SSE-300/models/Linux64_GCC-9.3/FVP_Corstone_SSE-300_Ethos-U55 -C mps3_board.visualisation.disable-visualisation=1 -C mps3_board.telnetterminal0.start_telnet=0 -C mps3_board.uart0.out_file="-" -C mps3_board.uart0.unbuffered_output=1  -a /path/to/repo/build/src/main_nn
     ```
 # Problems
-1. Ethos test cannot print "Hello World" on the terminal.
+1. Ethos test **cannot** print "Hello World" on the terminal.
 ![alt text](doc/ethos_1.png)
 ![alt text](doc/nn_1.png)
-2. Uncomment line 14 in [src/main.c](src/main.c), ethos test print 'a' on the terminal, while nn test print 'Hello World' and 'aa' on the terminal.
+2. Uncomment line 14 in [src/main.c](src/main.c), ethos test **cannot** print "Hello world", but print 'a' correctly. While nn test print 'Hello World', 'a' and an **extra** 'a'.
 ![alt text](doc/ethos_2.png)
 ![alt text](doc/nn_2.png)
-3. Uncomment line 15 in [src/main.c](src/main.c), both tests print correctly.
+3. Uncomment line 15 in [src/main.c](src/main.c), **both** tests print correctly.
 ![alt text](doc/ethos_3.png)
 ![alt text](doc/nn_3.png)
